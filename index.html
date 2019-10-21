@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>fake tax id</title>
+</head>
+<body>
+<form action="javascript:generate()">
+    <div>
+        <label>
+            <input required type="radio" name="gender" checked value="MALE">
+            MALE
+        </label>
+        <label>
+            <input required type="radio" name="gender" value="FEMALE">
+            FEMALE
+        </label>
+    </div>
+	<br>
+    <div>
+        <label>
+            enter date in dd.mm.yyyy format
+            <input required="" id="date" placeholder="dd.mm.yyyy" type="text" pattern="\d{2}.\d{2}.\d{4}" name="date">
+        </label>
+		<br>
+    </div>
+	<br>
+    <div>
+        <button type="submit"> GENERATE!</button>
+    </div>
+</form>
+<br><br>
+<div>
+    <label>
+        result
+        <input id="result" type="text" readonly="" name="result">
+
+    </label>
+</div>
+
+<script type="module" src="main.js"></script>
+</body>
+</html>
