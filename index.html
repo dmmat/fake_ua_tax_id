@@ -2,41 +2,46 @@
 <html>
 <head>
     <title>fake tax id</title>
+    <link rel="stylesheet" href="https://gitcdn.link/repo/Chalarangelo/mini.css/master/dist/mini-default.min.css"/>
 </head>
 <body>
-<form action="javascript:generate()">
-    <div>
-        <label>
-            <input required type="radio" name="gender" checked value="MALE">
-            MALE
-        </label>
-        <label>
-            <input required type="radio" name="gender" value="FEMALE">
-            FEMALE
-        </label>
-    </div>
-	<br>
-    <div>
-        <label>
-            enter date in dd.mm.yyyy format
-            <input required="" id="date" placeholder="dd.mm.yyyy" type="text" pattern="\d{2}.\d{2}.\d{4}" name="date">
-        </label>
-		<br>
-    </div>
-	<br>
-    <div>
-        <button type="submit"> GENERATE!</button>
-    </div>
-</form>
-<br><br>
-<div>
-    <label>
-        result
-        <input id="result" type="text" readonly="" name="result">
+<div class="container">
 
-    </label>
+    <div class="card">
+        <form action="javascript:generate()">
+            <div class="input-group fluid">
+                <label>
+                    <input required type="radio" name="gender" checked value="MALE">
+                    MALE
+                </label>
+                <label>
+                    <input required type="radio" name="gender" value="FEMALE">
+                    FEMALE
+                </label>
+            </div>
+            <br>
+
+            <div class="input-group fluid">
+                <label style="text-align: center">
+                    enter date in dd.mm.yyyy format
+                    <input required="" id="date" placeholder="dd.mm.yyyy" type="text" pattern="\d{2}.\d{2}.\d{4}"
+                           name="date">
+                </label>
+            </div>
+            <br>
+
+            <div class="input-group fluid">
+                <button class="primary" type="submit"> GENERATE!</button>
+            </div>
+        </form>
+    </div>
+    <div class="card row">
+        <label>
+            result
+            <input id="result" type="text" readonly="" name="result">
+        </label>
+    </div>
 </div>
-
 <script type="module" src="main.js"></script>
 </body>
 </html>
