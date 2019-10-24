@@ -1,1 +1,1 @@
-generate fake ukranian tax id 
+generate fake ukrainian tax id (Taxpayer Identification Number)
