@@ -10,7 +10,7 @@ window.generate = () => {
   }
 };
 
-window.generate = () => {
+window.copyResult = () => {
   const result = document.getElementById("result");
   result.select();
   document.execCommand("copy");
