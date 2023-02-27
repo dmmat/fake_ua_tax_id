@@ -9,3 +9,9 @@ window.generate = () => {
     alert(e)
   }
 };
+
+window.generate = () => {
+  const result = document.getElementById("result");
+  result.select();
+  document.execCommand("copy");
+};
