@@ -39,7 +39,12 @@
     <div class="card row">
         <label>
             result
-            <input id="result" type="text" readonly="" name="result">
+            <div class="input-group">
+                <input id="result" type="text" readonly="" name="result">
+                <button class="icon" onclick="copyResult()" title="Copy to clipboard">
+                   copy
+                </button>
+            </div>
         </label>
     </div>
 </div>
