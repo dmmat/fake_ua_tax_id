@@ -1,53 +1,95 @@
-<!DOCTYPE html>
+<!doctype html>
 <html>
-<head>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>fake tax id</title>
-   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/mini.css/3.0.1/mini-default.min.css">
-</head>
-<body>
-<div class="container" >
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <title>fake tax id</title>
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/mini.css/3.0.1/mini-default.min.css"
+        />
+    </head>
+    <body>
+        <div class="container">
+            <div class="card">
+                <form action="javascript:generate()">
+                    <div class="input-group fluid">
+                        <label>
+                            <input
+                                required
+                                type="radio"
+                                name="gender"
+                                checked
+                                value="MALE"
+                            />
+                            MALE
+                        </label>
+                        <label>
+                            <input
+                                required
+                                type="radio"
+                                name="gender"
+                                value="FEMALE"
+                            />
+                            FEMALE
+                        </label>
+                    </div>
+                    <br />
 
-    <div class="card">
-        <form action="javascript:generate()">
-            <div class="input-group fluid">
+                    <div class="input-group fluid">
+                        <label style="text-align: center">
+                            enter date in dd.mm.yyyy format
+                            <input
+                                required=""
+                                id="date"
+                                placeholder="dd.mm.yyyy"
+                                type="text"
+                                pattern="\d{2}.\d{2}.\d{4}"
+                                name="date"
+                            />
+                        </label>
+                    </div>
+                    <br />
+
+                    <div class="input-group fluid">
+                        <button class="primary" type="submit">GENERATE!</button>
+                    </div>
+                </form>
+            </div>
+            <div class="card row">
                 <label>
-                    <input required type="radio" name="gender" checked value="MALE">
-                    MALE
+                    TAX ID
+                    <div class="button-group">
+                        <input
+                            id="result"
+                            type="text"
+                            readonly=""
+                            name="result"
+                        />
+                        <button
+                            class="icon"
+                            onclick="copyResult()"
+                            title="Copy to clipboard"
+                        >
+                            copy
+                        </button>
+                    </div>
                 </label>
+
                 <label>
-                    <input required type="radio" name="gender" value="FEMALE">
-                    FEMALE
+                    UNZR
+                    <div class="button-group">
+                        <input id="unzr" type="text" readonly="" name="unzr" />
+                        <button
+                            class="icon"
+                            onclick="copyUNZR()"
+                            title="Copy to clipboard"
+                        >
+                            copy
+                        </button>
+                    </div>
                 </label>
             </div>
-            <br>
-
-            <div class="input-group fluid">
-                <label style="text-align: center">
-                    enter date in dd.mm.yyyy format
-                    <input required="" id="date" placeholder="dd.mm.yyyy" type="text" pattern="\d{2}.\d{2}.\d{4}"
-                           name="date">
-                </label>
-            </div>
-            <br>
-
-            <div class="input-group fluid">
-                <button class="primary" type="submit"> GENERATE!</button>
-            </div>
-        </form>
-    </div>
-    <div class="card row">
-        <label>
-            result
-            <div class="button-group">
-                <input id="result" type="text" readonly="" name="result">
-                <button class="icon" onclick="copyResult()" title="Copy to clipboard">
-                   copy
-                </button>
-            </div>
-        </label>
-    </div>
-</div>
-<script type="module" src="main.js"></script>
-</body>
+        </div>
+        <script type="module" src="main.js"></script>
+    </body>
 </html>
